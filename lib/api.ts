@@ -1,4 +1,4 @@
-export const API_URL = process.env.PUBLIC_API_URL!;
+export const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 export async function apiGet<T = any>(path: string): Promise<T> {
   const res = await fetch(`${API_URL}${path}`);
