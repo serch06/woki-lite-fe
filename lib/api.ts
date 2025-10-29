@@ -1,7 +1,5 @@
 export const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
-console.log("API_URL", API_URL);
-
 export async function apiGet<T = any>(path: string): Promise<T> {
   const res = await fetch(`${API_URL}${path}`);
   if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);

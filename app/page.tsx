@@ -29,7 +29,6 @@ const STATUS_CLASS: Record<string, string> = {
 };
 
 export default function Home() {
-console.log("ENV test:", process.env.NEXT_PUBLIC_API_URL);
 
   const [date, setDate] = useState(new Date());
 
@@ -76,6 +75,7 @@ const reservations = data?.items ?? [];
       <table className="min-w-full border-collapse text-sm">
         <thead>
           <tr className="bg-slate-100 text-slate-600">
+            <th className="px-4 py-3 text-left font-semibold">Id</th>
             <th className="px-4 py-3 text-left font-semibold">Sector</th>
             <th className="px-4 py-3 text-left font-semibold">Inicio</th>
             <th className="px-4 py-3 text-left font-semibold">Fin</th>
@@ -117,6 +117,7 @@ const reservations = data?.items ?? [];
               <td className="px-4 py-3 text-slate-500">{r.customer.phone}</td>
               <td className="px-4 py-3 text-slate-500">{r.customer.email}</td>
               <td className="px-4 py-3 text-slate-600">{r.notes ?? "—"}</td>
+              <td className="px-4 py-3 text-slate-600">{r.id ?? "—"}</td>
             </tr>
           ))}
         </tbody>
