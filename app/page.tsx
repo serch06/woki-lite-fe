@@ -29,6 +29,8 @@ const STATUS_CLASS: Record<string, string> = {
 };
 
 export default function Home() {
+console.log("ENV test:", process.env.NEXT_PUBLIC_API_URL);
+
   const [date, setDate] = useState(new Date());
 
 const { data, error, isLoading } = useSWR<DayPayload>(
@@ -37,7 +39,6 @@ const { data, error, isLoading } = useSWR<DayPayload>(
 );
 
 const reservations = data?.items ?? [];
-console.log(reservations)
   return (
     <main className="mx-auto max-w-6xl space-y-6 p-8 text-slate-900">
       <header className="flex items-center justify-between border-b pb-4">
