@@ -1,10 +1,21 @@
-# Woki Lite Frontend
+# Woki Lite — Frontend
 
-Next.js dashboard for browsing daily reservations.
+Frontend web app for the **Woki Lite restaurant reservation system**, built for the Appeiron Global Solutions take-home challenge.  
+It consumes the public REST API and displays daily reservations per restaurant.
 
-## Requirements
-- Node.js 18+ (LTS recommended)
-- PNPM 8+
+## Tech Stack
+- **Next.js 14 (App Router)**
+- **TypeScript**
+- **TailwindCSS / Nebular UI**
+- **Deployed on Vercel:** https://woki-lite-fe.vercel.app/
+- **Backend API:** https://woki-lite-be.onrender.com/api/
+
+## Features
+✅ View reservations by date  
+✅ Paginate between days (Prev / Next)  
+✅ Error handling and loading states  
+✅ Fully responsive  
+✅ Connected to live backend
 
 ## Quick Setup
 1. Clone the repo and `cd` into `woki-lite-fe/`.
