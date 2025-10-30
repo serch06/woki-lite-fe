@@ -41,7 +41,7 @@ const reservations = data?.items ?? [];
   return (
     <main className="mx-auto max-w-6xl space-y-6 p-8 text-slate-900">
       <header className="flex items-center justify-between border-b pb-4">
-        <h1 className="text-3xl font-semibold">Woki Lite — Reservas por dia</h1>
+        <h1 className="text-3xl font-semibold">Woki Lite — Listado de Reservas</h1>
         <div className="flex items-center gap-3">
           <button
             onClick={() => setDate(addDays(date, -1))}
@@ -69,7 +69,7 @@ const reservations = data?.items ?? [];
       )}
 {!isLoading && !error && (
   reservations.length === 0 ? (
-    <p className="text-slate-500">No reservations for this day.</p>
+    <p className="text-slate-500">No hay reservas para este día.</p>
   ) : (
     <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
       <table className="min-w-full border-collapse text-sm">
