@@ -91,6 +91,7 @@ const reservations = data?.items ?? [];
         <tbody className="divide-y divide-slate-200">
           {reservations.map((r) => (
             <tr key={r.id} className="hover:bg-slate-50 transition-colors">
+              <td className="px-4 py-3 text-slate-600">{r.id ?? "—"}</td>
               <td className="whitespace-nowrap px-4 py-3 font-medium text-slate-800">
                 {r.sectorId}
               </td>
@@ -117,7 +118,6 @@ const reservations = data?.items ?? [];
               <td className="px-4 py-3 text-slate-500">{r.customer.phone}</td>
               <td className="px-4 py-3 text-slate-500">{r.customer.email}</td>
               <td className="px-4 py-3 text-slate-600">{r.notes ?? "—"}</td>
-              <td className="px-4 py-3 text-slate-600">{r.id ?? "—"}</td>
             </tr>
           ))}
         </tbody>
